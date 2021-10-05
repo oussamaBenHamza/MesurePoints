@@ -14,7 +14,7 @@
 						"HeadlineText": "{KTEXT}"
 					},
 					"_Type": "Section.Type.ObjectHeader",
-					"_Name": "SectionObjectHeader0",
+					"_Name": "HeaderObject",
 					"Visible": true
 				},
 				{
