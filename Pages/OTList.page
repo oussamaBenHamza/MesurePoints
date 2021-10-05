@@ -1,0 +1,79 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/MesurePointGRT/Services/MesurePoints.service",
+						"EntitySet": "orderSet",
+						"QueryOptions": "$orderby=GSTRP"
+					},
+					"_Name": "OTList",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "Aucun Ordre de travail",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "{KTEXT}",
+						"Subhead": "{AUFNR}",
+						"Footnote": "$(D,{GSTRP},'','',{format:'medium'})",
+						"StatusText": "{ARBPL}",
+						"SubstatusText": "{SWERK}",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/MesurePointGRT/Actions/NavToOTDetail.action",
+						"Selected": false
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "OT a chercher"
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "OTList",
+	"Caption": "Ordres de travail",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Refresh",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Filtrer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MesurePointGRT/Actions/NavToOTListFilters.action"
+			}
+		],
+		"_Name": "ActionBar0"
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "Service": "/MesurePointGRT/Services/MesurePoints.service",
+    "DefiningRequests": [{
+            "Name": "orderSet",
+            "Query": "orderSet"
+        },
+        {
+            "Name": "pointMesureSet",
+            "Query": "pointMesureSet"
+        }
+    ],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/MesurePointGRT/Actions/Service/SyncFailureMessage.action"
+}

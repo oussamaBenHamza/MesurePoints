@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/MesurePointGRT/Services/MesurePoints.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/MesurePointGRT/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/MesurePointGRT/Actions/Service/CloseOfflineFailureMessage.action"
+}

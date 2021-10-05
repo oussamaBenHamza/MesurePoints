@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:edmx4="http://docs.oasis-open.org/odata/ns/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+<DataServices m:DataServiceVersion="2.0">
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="pt.ns" Alias="Self">
+<EntityType Name="order">
+<Key>
+<PropertyRef Name="AUFNR"/>
+</Key>
+<Property Name="ARBPL" Type="Edm.String" Nullable="false"/>
+<Property Name="AUART" Type="Edm.String" Nullable="false"/>
+<Property Name="AUFNR" Type="Edm.Int64" Nullable="false"/>
+<Property Name="GSTRP" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date"/>
+<Property Name="INGRP" Type="Edm.String" Nullable="false"/>
+<Property Name="KTEXT" Type="Edm.String" Nullable="false"/>
+<Property Name="SWERK" Type="Edm.String" Nullable="false"/>
+<Property Name="TYPE_TRAVAIL" Type="Edm.String" Nullable="false"/>
+<NavigationProperty Name="pointMesures" Relationship="Self.PointMesure_to_Order" FromRole="orderPrincipal" ToRole="pointMesureDependent"/>
+</EntityType>
+<EntityType Name="pointMesure">
+<Key>
+<PropertyRef Name="point"/>
+</Key>
+<Property Name="AUFNR" Type="Edm.Int64" Nullable="false"/>
+<Property Name="beber" Type="Edm.String" Nullable="false"/>
+<Property Name="desir" Type="Edm.String" Nullable="false"/>
+<Property Name="indct" Type="Edm.String" Nullable="false"/>
+<Property Name="indrv" Type="Edm.String" Nullable="false"/>
+<Property Name="mptyp" Type="Edm.String" Nullable="false"/>
+<Property Name="mrmax" Type="Edm.String" Nullable="false"/>
+<Property Name="mrmin" Type="Edm.String" Nullable="false"/>
+<Property Name="mrngu" Type="Edm.String" Nullable="false"/>
+<Property Name="point" Type="Edm.Int64" Nullable="false"/>
+<Property Name="ppttxt" Type="Edm.String" Nullable="false"/>
+<Property Name="psort" Type="Edm.String" Nullable="false"/>
+<Property Name="suppr" Type="Edm.String" Nullable="false"/>
+<Property Name="swerk" Type="Edm.String" Nullable="false"/>
+<Property Name="typeobjet" Type="Edm.String" Nullable="false"/>
+<NavigationProperty Name="order" Relationship="Self.PointMesure_to_Order" FromRole="pointMesureDependent" ToRole="orderPrincipal"/>
+</EntityType>
+<Association Name="PointMesure_to_Order">
+<End Type="Self.pointMesure" Multiplicity="*" Role="pointMesureDependent"/>
+<End Type="Self.order" Multiplicity="1" Role="orderPrincipal"/>
+<ReferentialConstraint>
+<Principal Role="orderPrincipal">
+<PropertyRef Name="AUFNR"/>
+</Principal>
+<Dependent Role="pointMesureDependent">
+<PropertyRef Name="AUFNR"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<EntityContainer Name="Pt_nsService" m:IsDefaultEntityContainer="true">
+<EntitySet Name="orderSet" EntityType="Self.order"/>
+<EntitySet Name="pointMesureSet" EntityType="Self.pointMesure"/>
+<AssociationSet Name="PointMesureSet_to_OrderSet" Association="Self.PointMesure_to_Order">
+<End EntitySet="pointMesureSet" Role="pointMesureDependent"/>
+<End EntitySet="orderSet" Role="orderPrincipal"/>
+</AssociationSet>
+</EntityContainer>
+</Schema>
+</DataServices>
+</Edmx>

@@ -1,0 +1,72 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{AUFNR}",
+						"Footnote": "$(D,{GSTRP},'','',{format:'medium'})",
+						"StatusText": "{ARBPL}",
+						"SubstatusText": "{SWERK}",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "{KTEXT}"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Header": {
+						"_Name": "SectionHeader0",
+						"UseTopPadding": true,
+						"Caption": "Points de mesures"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/MesurePointGRT/Services/MesurePoints.service",
+						"EntitySet": "{@odata.readLink}/pointMesures",
+						"QueryOptions": "$orderby=mptyp"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "Aucun points de mesure",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "{ppttxt}",
+						"Subhead": "{typeobjet}",
+						"Footnote": "$(D,{mptyp},'','',{format:'medium'})",
+						"StatusText": "{point}",
+						"SubstatusText": "{swerk}",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/MesurePointGRT/Actions/NavToPtMesureDetail.action",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "OTDetails",
+	"Caption": "Ordre de travail N° {AUFNR}"
+}

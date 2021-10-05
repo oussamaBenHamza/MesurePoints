@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/MesurePointGRT/Actions/Service/SyncFailureMessage.action",
+	"OnSuccess": "/MesurePointGRT/Actions/Service/DownloadStartedMessage.action",
+	"Service": "/MesurePointGRT/Services/MesurePoints.service"
+}

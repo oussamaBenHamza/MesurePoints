@@ -1,0 +1,63 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"validationProperties": {
+								"ValidationViewIsHidden": true
+							},
+							"_Type": "Control.Type.FormCell.Filter",
+							"_Name": "TypeOtsFilter",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Type d'OT",
+							"FilterProperty": "/MesurePointGRT/Rules/FiltersJS.js"
+						}
+					],
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Title": "Réinitialiser",
+							"TextAlignment": "center"
+						}
+					],
+					"Visible": true
+				},
+				{
+					"Controls": [
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "OTFilters",
+	"Caption": "Filter",
+	"ActionBar": {
+		"Items": [
+			{
+				"Text": "",
+				"_Name": "ActionBarItem1",
+				"Caption": "Lancer",
+				"Position": "right",
+				"IsIconCircular": false
+			}
+		],
+		"_Name": "ActionBar0"
+	},
+	"Result": [
+		"#Page:OTFilters/#Control:TypeOtsFilter/#Value"
+	]
+}

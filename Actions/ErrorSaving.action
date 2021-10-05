@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "Error While Saving",
+	"Title": "Saving",
+	"OKCaption": "OK",
+	"OnOK": "/MesurePointGRT/Actions/ClosePage.action"
+}

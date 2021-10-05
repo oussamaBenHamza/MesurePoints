@@ -1,0 +1,25 @@
+{
+	"Credential": "cf",
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=MesurePoints&ClientId=63ce314c-02d3-4c82-8859-a780c1551c56&ServerUrl=https://grtgaz-gai-dev-puma-int-mesurepoints.cfapps.eu10.hana.ondemand.com&SapCloudPlatformEndpoint=https://grtgaz-gai-dev-puma-int-mesurepoints.cfapps.eu10.hana.ondemand.com&AuthorizationEndpointUrl=https://grtgaz-gai-dev-puma-int-mesurepoints.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://grtgaz-gai-dev-puma-int-mesurepoints.cfapps.eu10.hana.ondemand.com&TokenUrl=https://grtgaz-gai-dev-puma-int-mesurepoints.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/token"
+	},
+	"CF": {
+		"Target": "https://api.cf.eu10.hana.ondemand.com",
+		"Organization": "994e5b40-51a6-473a-8d40-a4061e0d0ba7",
+		"Space": "c1ed7f6a-4f97-4806-9c45-56cf9288860b"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.eu10.hana.ondemand.com/cockpit/v1/org/994e5b40-51a6-473a-8d40-a4061e0d0ba7/space/c1ed7f6a-4f97-4806-9c45-56cf9288860b",
+		"AppId": "MesurePoints",
+		"Destination": [
+			"com.sap.edm.sampleservice.v2",
+			"MesurePoints"
+		]
+	},
+	"Build": {
+		"SourceMap": true
+	}
+}

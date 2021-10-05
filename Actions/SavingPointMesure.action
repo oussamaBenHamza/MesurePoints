@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"OnFailure": "/MesurePointGRT/Actions/ErrorSaving.action",
+	"Target": {
+		"Service": "/MesurePointGRT/Services/MesurePoints.service",
+		"EntitySet": "{@odata.readLink}/pointMesures"
+	},
+	"Properties": {
+		"indct": "#Page:PTMesureDetails/#Control:NewMesure/#Value",
+		"mptyp": "#Page:PTMesureDetails/#Control:NewMesureDate/#Value"
+	}
+}

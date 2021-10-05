@@ -1,0 +1,143 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{ppttxt}",
+							"_Name": "KeyValue0",
+							"KeyName": "Désignation",
+							"Visible": true
+						},
+						{
+							"Value": "{indct}",
+							"_Name": "KeyValue1",
+							"KeyName": "Dernier relevé de mesure",
+							"Visible": true
+						},
+						{
+							"Value": "$(D,{mptyp},'','',{format:'medium'})",
+							"_Name": "KeyValue2",
+							"KeyName": "Date du dernier relevé",
+							"Visible": true
+						},
+						{
+							"Value": "{typeobjet}",
+							"_Name": "KeyValue3",
+							"KeyName": "Poste technique",
+							"Visible": true
+						},
+						{
+							"Value": "{psort}",
+							"_Name": "KeyValue4",
+							"KeyName": "Position",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{mrmax}",
+							"_Name": "KeyValue5",
+							"KeyName": "Limite supérieure",
+							"Visible": true
+						},
+						{
+							"Value": "{mrmin}",
+							"_Name": "KeyValue6",
+							"KeyName": "Limite inférieure",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{desir}",
+							"_Name": "KeyValue7",
+							"KeyName": "Valeur théorique",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue2",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "NewMesure",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Nouvelle mesure",
+							"KeyboardType": "Number",
+							"AlternateInput": "None"
+						},
+						{
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "NewMesureDate",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Date du prélevement",
+							"Mode": "datetime"
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "PTMesureDetails",
+	"Caption": "Poin de mesure N°{point}",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Sauvegarder",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MesurePointGRT/Actions/SavingPointMesure.action"
+			}
+		],
+		"_Name": "ActionBar0"
+	}
+}

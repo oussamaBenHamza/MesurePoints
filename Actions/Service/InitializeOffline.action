@@ -1,0 +1,20 @@
+{
+    "Service": "/MesurePointGRT/Services/MesurePoints.service",
+    "DefiningRequests": [{
+            "Name": "orderSet",
+            "Query": "orderSet"
+        },
+        {
+            "Name": "pointMesureSet",
+            "Query": "pointMesureSet"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/MesurePointGRT/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/MesurePointGRT/Actions/Service/InitializeOfflineFailureMessage.action"
+}
