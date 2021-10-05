@@ -68,5 +68,5 @@
 	],
 	"_Type": "Page",
 	"_Name": "OTDetails",
-	"Caption": "Ordre de travail N° {AUFNR}"
+	"Caption": "Ordre de travail N° {AUFNR} "
 }
