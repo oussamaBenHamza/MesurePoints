@@ -11,7 +11,7 @@
 								"ValidationViewIsHidden": true
 							},
 							"_Type": "Control.Type.FormCell.Filter",
-							"_Name": "TypeOtsFilter",
+							"_Name": "FiltreTypeOTs",
 							"IsEditable": true,
 							"IsVisible": true,
 							"AllowMultipleSelection": true,
